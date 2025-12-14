@@ -70,7 +70,7 @@ const servicesData = {
     {
       icon: EmbroideryIcon,
       title: "Embroidery & Printing",
-      image: "https://images.unsplash.com/photo-1558171813-6be261e62c1c?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
       description: "Custom embroidery and printing services for branding and design elements.",
       details: [
         "Multi-head embroidery machines",
@@ -150,7 +150,7 @@ const servicesData = {
     {
       icon: EmbroideryIcon,
       title: "التطريز والطباعة",
-      image: "https://images.unsplash.com/photo-1558171813-6be261e62c1c?w=800&q=80",
+      image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
       description: "خدمات تطريز وطباعة مخصصة للعلامات التجارية وعناصر التصميم.",
       details: [
         "آلات تطريز متعددة الرؤوس",

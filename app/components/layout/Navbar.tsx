@@ -17,7 +17,7 @@ export function Navbar() {
     { href: "/about", label: t("nav.about") },
     { href: "/products", label: t("nav.products") },
     { href: "/services", label: t("nav.services") },
-    { href: "/portfolio", label: t("nav.portfolio") },
+    { href: "/blog", label: t("nav.blog") },
   ];
 
   // Prevent body scroll when menu is open

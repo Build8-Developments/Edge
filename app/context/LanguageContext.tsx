@@ -18,7 +18,7 @@ const translations = {
     "nav.about": "ABOUT",
     "nav.products": "PRODUCTS",
     "nav.services": "OUR SERVICES",
-    "nav.portfolio": "PORTFOLIO",
+    "nav.blog": "BLOG",
     "nav.contact": "CONTACT",
     "nav.getInTouch": "Get in touch",
 
@@ -148,7 +148,7 @@ const translations = {
     "nav.about": "من نحن",
     "nav.products": "المنتجات",
     "nav.services": "خدماتنا",
-    "nav.portfolio": "أعمالنا",
+    "nav.blog": "المدونة",
     "nav.contact": "تواصل معنا",
     "nav.getInTouch": "تواصل معنا",
 
