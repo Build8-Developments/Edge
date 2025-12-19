@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
-import { isValidLocale, siteUrl, getDirection, type Locale } from "../../i18n/config";
+import { isValidLocale, siteUrl, getDirection } from "../../i18n/config";
 import { getDictionary } from "../../i18n/dictionaries";
 import { Navbar } from "../components/layout/Navbar";
 import { Footer } from "../components/layout/Footer";
@@ -15,6 +15,11 @@ import {
   FlexibilityIcon,
 } from "../../components/Icons";
 import { PageHero } from "../components/PageHero";
+import { Timeline } from "../components/Timeline";
+import { LocationsMapSection } from "../sections/LocationsMapSection";
+import { TeamCarousel } from "../components/TeamCarousel";
+import { FAQSection } from "../sections/FAQSection";
+import { PartnersSection } from "../sections/PartnersSection";
 
 interface PageProps {
   params: Promise<{ locale: string }>;
@@ -99,24 +104,6 @@ export default async function AboutPage({ params }: PageProps) {
         { number: "150", label: "Workers" },
       ];
 
-  const compliancePoints = isRTL
-    ? [
-        "لا نسمح بعمالة الأطفال أو العمل القسري",
-        "سلامة الموظفين هي أولويتنا القصوى",
-        "تدريبات الإخلاء من الحريق شهرياً",
-        "الامتثال للقانون",
-        "يجب على جميع الموظفين حماية شرعية شركتنا",
-        "نتوقع من الموظفين أن يكونوا أخلاقيين ومسؤولين",
-      ]
-    : [
-        "Does not allow child or forced labor",
-        "Employee safety is our top priority",
-        "Fire drills conducted monthly",
-        "Compliance with law",
-        "All employees must protect our company's legality",
-        "We expect employees to be ethical and responsible",
-      ];
-
   const teamMembers = isRTL
     ? [
         { name: "السيد شليل", role: "رئيس مجلس الإدارة / المدير العام", image: "https://edgeforgarments.com/wp-content/uploads/2020/09/shleel.jpg" },
@@ -130,18 +117,6 @@ export default async function AboutPage({ params }: PageProps) {
         { name: "Mohamed Taha", role: "Chief Executive Officer (CEO)", image: "https://edgeforgarments.com/wp-content/uploads/2020/09/taha1.jpg" },
         { name: "Osama Ramadan", role: "General Manager", image: null },
       ];
-
-  const businessInfo = isRTL
-    ? {
-        natureOfBusiness: "مصنع للسوق المحلي ومصدر للملابس الجاهزة المنسوجة",
-        termsOfBusiness: "FOB، اعتماد مستندي عند الاطلاع، عقد، CMWP",
-        markets: "السوق المحلي 100% – خطة الولايات المتحدة 100%",
-      }
-    : {
-        natureOfBusiness: "Manufacturer for local market & Exporter of Readymade woven Garments",
-        termsOfBusiness: "FOB, L/C at sight, Contract, CMWP",
-        markets: "Local Market 100% – Plan USA 100%",
-      };
 
   return (
     <main className="min-h-screen bg-white">
@@ -165,56 +140,11 @@ export default async function AboutPage({ params }: PageProps) {
       />
 
       {/* Timeline */}
-      <section className="py-20 lg:py-32" style={{ backgroundColor: "#F8F9FB" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className={`text-3xl md:text-4xl font-bold text-[#122D8B] ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-              {isRTL ? "رحلتنا" : "Our Journey"}
-            </h2>
-          </div>
-
-          <div className="relative">
-            <div className={`absolute top-0 bottom-0 w-0.5 bg-[#B6C6E1] ${isRTL ? "right-8 lg:right-1/2" : "left-8 lg:left-1/2"}`} />
-
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={milestone.year}
-                  className={`relative flex items-center gap-8 ${
-                    isRTL
-                      ? index % 2 === 0
-                        ? "lg:flex-row-reverse"
-                        : "lg:flex-row"
-                      : index % 2 === 0
-                      ? "lg:flex-row"
-                      : "lg:flex-row-reverse"
-                  }`}
-                >
-                  <div
-                    className={`absolute w-4 h-4 bg-[#1A4AFF] z-10 ${
-                      isRTL ? "right-8 lg:right-1/2 translate-x-1/2" : "left-8 lg:left-1/2 -translate-x-1/2"
-                    }`}
-                  />
-
-                  <div
-                    className={`lg:w-1/2 ${
-                      isRTL
-                        ? `pr-20 lg:pr-0 ${index % 2 === 0 ? "lg:pl-16 lg:text-left" : "lg:pr-16 lg:text-right"}`
-                        : `pl-20 lg:pl-0 ${index % 2 === 0 ? "lg:pr-16 lg:text-right" : "lg:pl-16"}`
-                    }`}
-                  >
-                    <div className="text-[#1A4AFF] font-bold text-2xl mb-2">{milestone.year}</div>
-                    <h3 className={`text-[#122D8B] font-bold text-lg mb-1 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                      {milestone.title}
-                    </h3>
-                    <p className={`text-[#122D8B]/60 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{milestone.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <Timeline
+        milestones={milestones}
+        isRTL={isRTL}
+        title={isRTL ? "رحلتنا" : "Our Journey"}
+      />
 
       {/* About Company Section */}
       <section className="py-20 lg:py-32 bg-white">
@@ -255,132 +185,87 @@ export default async function AboutPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Compliance Section */}
-      <section className="py-20 lg:py-32" style={{ backgroundColor: "#F8F9FB" }}>
+      {/* Stats Section - Modern Layout with Team Images on Sides */}
+      <section className="py-20 lg:py-32 bg-[#F8F9FB]">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <h2 className={`text-3xl md:text-4xl font-bold text-[#122D8B] ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-              {isRTL ? "الامتثال والأخلاقيات" : "Compliance & Ethics"}
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {compliancePoints.map((point, index) => (
-              <div
-                key={index}
-                className={`p-6 bg-white border border-[#D8DDE9] flex items-start gap-4 ${isRTL ? "text-right" : ""}`}
-              >
-                <div className="w-8 h-8 bg-[#1A4AFF] text-white flex items-center justify-center flex-shrink-0">
-                  ✓
+          <div className="grid lg:grid-cols-3 gap-6 items-stretch">
+            {/* Left Image - Team Member */}
+            <div className="relative h-[500px] lg:h-auto rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="https://edgeforgarments.com/wp-content/uploads/2020/09/shleel.jpg"
+                alt={isRTL ? "السيد شليل" : "Elsayed Sheleil"}
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#122D8B]/80 via-transparent to-transparent" />
+              <div className={`absolute bottom-6 ${isRTL ? "right-6" : "left-6"}`}>
+                <p className={`text-white font-bold text-lg ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+                  {isRTL ? "السيد شليل" : "Elsayed Sheleil"}
+                </p>
+                <p className={`text-white/70 text-sm ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+                  {isRTL ? "رئيس مجلس الإدارة" : "Chairman"}
+                </p>
+              </div>
+            </div>
+
+            {/* Center Content with Stats */}
+            <div className="flex flex-col gap-4">
+              {/* Blue Card with Percentage */}
+              <div className="bg-[#1A4AFF] rounded-3xl p-8 text-white flex-1 flex flex-col justify-center">
+                <p className={`text-white/80 text-sm mb-4 leading-relaxed ${isRTL ? "font-[var(--font-cairo)] text-right" : ""}`}>
+                  {isRTL
+                    ? "نقدم حلولاً مبتكرة والتزاماً بالتميز في كل منتج نصنعه."
+                    : "We deliver innovative solutions and a commitment to excellence in every product we manufacture."}
+                </p>
+                <p className="text-6xl md:text-7xl font-bold">95%</p>
+                <p className={`text-white/70 text-sm mt-2 ${isRTL ? "font-[var(--font-cairo)] text-right" : ""}`}>
+                  {isRTL ? "رضا العملاء" : "Customer Satisfaction"}
+                </p>
+              </div>
+
+              {/* Dark Card with Years */}
+              <div className="bg-[#1E1E2D] rounded-3xl p-8 text-white flex-1 flex flex-col justify-center">
+                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center mb-4">
+                  <div className="w-3 h-3 rounded-full bg-white" />
                 </div>
-                <p className={`text-[#122D8B]/80 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{point}</p>
+                <p className="text-5xl md:text-6xl font-bold">16+</p>
+                <p className={`text-white/60 text-sm mt-3 leading-relaxed ${isRTL ? "font-[var(--font-cairo)] text-right" : ""}`}>
+                  {isRTL
+                    ? "سنوات من الابتكار والخبرة، نمكّن الشركات من النجاح في سوق تنافسي."
+                    : "Years of innovation and valuable insights, empowering businesses to thrive in a competitive market."}
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Business Info Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className={`p-8 border border-[#D8DDE9] ${isRTL ? "text-right" : ""}`}>
-              <h3 className={`text-lg font-bold text-[#122D8B] mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL ? "طبيعة العمل" : "Nature of Business"}
-              </h3>
-              <p className={`text-[#122D8B]/70 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{businessInfo.natureOfBusiness}</p>
-            </div>
-            <div className={`p-8 border border-[#D8DDE9] ${isRTL ? "text-right" : ""}`}>
-              <h3 className={`text-lg font-bold text-[#122D8B] mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL ? "شروط العمل" : "Terms of Business"}
-              </h3>
-              <p className={`text-[#122D8B]/70 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{businessInfo.termsOfBusiness}</p>
-            </div>
-            <div className={`p-8 border border-[#D8DDE9] ${isRTL ? "text-right" : ""}`}>
-              <h3 className={`text-lg font-bold text-[#122D8B] mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL ? "الأسواق" : "Markets"}
-              </h3>
-              <p className={`text-[#122D8B]/70 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{businessInfo.markets}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Philosophy & Vision Section */}
-      <section className="py-20 lg:py-32" style={{ backgroundColor: "#122D8B" }}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div className={isRTL ? "text-right" : ""}>
-              <p className="text-[#1A4AFF] font-semibold mb-2">{isRTL ? "نحن خبراء" : "WE ARE EXPERT"}</p>
-              <h2 className={`text-3xl md:text-4xl font-bold text-white mb-6 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL ? "فلسفتنا" : "Our Philosophy"}
-              </h2>
-              <p className={`text-white/80 mb-6 leading-relaxed ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL
-                  ? "نتبنى موقفاً ديناميكياً يسمح لنا بأن نكون في طليعة الموضة وعلى دراية بالتغيرات السريعة في اتجاهات الموضة في السوق. هذا يسمح لنا بالقدرة على توقع متطلبات السوق والتكيف وفقاً لذلك."
-                  : "We employ a dynamic attitude that allows us to be fashion forward and aware of the rapid changes in fashion trends in the market. This allows us to be able to foresee the demands of the market and adapt accordingly."}
-              </p>
-              <p className={`text-white/80 leading-relaxed ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL
-                  ? "نجري حواراً مستمراً مع تجار التجزئة، والبحث والتطوير في المواد وتقنيات المعالجة، ونتعاون مع أفضل الموردين في الصناعة."
-                  : "We conduct ongoing dialogue with retailers, research and development of materials and processing techniques, and collaborate with the best suppliers in the industry."}
-              </p>
-            </div>
-            <div className={isRTL ? "text-right" : ""}>
-              <h2 className={`text-3xl md:text-4xl font-bold text-white mb-6 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL ? "رؤيتنا" : "Our Vision"}
-              </h2>
-              <p className={`text-white/80 mb-6 leading-relaxed ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL
-                  ? "في هذا السوق شديد التنافسية، تسعى شركة إيدج للملابس لتكون في عملية مستمرة من التوسع والتحسين مع دمج أحدث الابتكارات التكنولوجية لضمان أفضل المنتجات في الملابس الجاهزة لعملائنا."
-                  : "In this highly competitive market, Edge Garments Co. strives to be in a continuous process of expansion and enhancement while incorporating the latest technological innovations in order to ensure our customers the best products in readymade garments."}
-              </p>
-              <p className={`text-white/80 leading-relaxed ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                {isRTL
-                  ? "طاقتنا اليومية الحالية هي 1,000 قطعة. المصنع لديه القدرة والمساحة لإنتاج 5 أضعاف معدل الإنتاج هذا، ولهذا السبب لدى إيدج هدف لتوسيع إنتاجها اليومي إلى 5,000 قطعة دون المساس بجودة المنتجات والخدمات."
-                  : "Our current daily capacity is 1,000 pcs. The factory has the ability and space to produce 5x this production rate which is why Edge has a goal of expanding its daily production to 5,000 pieces without compromising quality of products and services."}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-12">
-            <p className={`text-[#1A4AFF] font-semibold mb-2 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-              {isRTL ? "فريقنا الخبير" : "OUR EXPERT TEAM"}
-            </p>
-            <h2 className={`text-3xl md:text-4xl font-bold text-[#122D8B] ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-              {isRTL ? "أعضاء الفريق" : "Team Members"}
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {teamMembers.map((member, index) => (
-              <div key={index} className={`text-center p-6 border border-[#D8DDE9] hover:border-[#1A4AFF]/30 transition-colors`}>
-                {member.image ? (
-                  <div className="w-24 h-24 mx-auto mb-4 relative overflow-hidden rounded-full">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                ) : (
-                  <div className="w-24 h-24 bg-[#122D8B] mx-auto mb-4 flex items-center justify-center rounded-full">
-                    <span className="text-white text-3xl font-bold">{member.name.charAt(0)}</span>
-                  </div>
-                )}
-                <h3 className={`text-lg font-bold text-[#122D8B] mb-2 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-                  {member.name}
-                </h3>
-                <p className={`text-[#122D8B]/60 text-sm ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>{member.role}</p>
+            {/* Right Image - Team Member */}
+            <div className="relative h-[500px] lg:h-auto rounded-3xl overflow-hidden shadow-lg">
+              <Image
+                src="https://edgeforgarments.com/wp-content/uploads/2020/09/shehab.jpg"
+                alt={isRTL ? "محمد شهاب" : "Mohamed Shehab"}
+                fill
+                className="object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#122D8B]/80 via-transparent to-transparent" />
+              <div className={`absolute bottom-6 ${isRTL ? "right-6" : "left-6"}`}>
+                <p className={`text-white font-bold text-lg ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+                  {isRTL ? "محمد شهاب" : "Mohamed Shehab"}
+                </p>
+                <p className={`text-white/70 text-sm ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+                  {isRTL ? "المدير التنفيذي" : "Executive Director"}
+                </p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* Team Section - Interactive Carousel */}
+      <TeamCarousel
+        members={teamMembers}
+        isRTL={isRTL}
+        title={isRTL ? "أعضاء الفريق" : "Team Members"}
+        subtitle={isRTL ? "فريقنا الخبير" : "OUR EXPERT TEAM"}
+      />
 
       {/* Values */}
       <section className="py-20 lg:py-32" style={{ backgroundColor: "#F8F9FB" }}>
@@ -456,6 +341,15 @@ export default async function AboutPage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      {/* Locations Map Section */}
+      <LocationsMapSection locale={locale} />
+
+      {/* Partners Section */}
+      <PartnersSection locale={locale} dict={dict} />
+
+      {/* FAQ Section */}
+      <FAQSection locale={locale} dict={dict} />
 
       <Footer locale={locale} dict={dict} />
       <Chatbot locale={locale} />

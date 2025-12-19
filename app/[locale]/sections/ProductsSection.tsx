@@ -13,69 +13,58 @@ export function ProductsSection({ locale, dict }: ProductsSectionProps) {
   const dir = getDirection(locale);
   const isRTL = dir === "rtl";
 
-  const products = productsData.products.map((p) => ({
+  const products = productsData.products.slice(0, 4).map((p) => ({
     title: isRTL ? p.title.ar : p.title.en,
     image: p.image,
     slug: p.slug,
   }));
 
   return (
-    <section id="products" className="py-20 lg:py-32 bg-white" dir={dir}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="text-center mb-16">
-          <span className={`text-[#1A4AFF] text-sm font-semibold uppercase tracking-wider block mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+    <section id="products" className="py-16 lg:py-24 bg-[#F8F9FB]" dir={dir}>
+      <div className="max-w-6xl mx-auto px-6 lg:px-12">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <span className={`text-[#1A4AFF] text-xs font-semibold uppercase tracking-wider block mb-3 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
             {dict.products.label}
           </span>
-          <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold text-[#122D8B] mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+          <h2 className={`text-3xl md:text-4xl font-bold text-[#122D8B] mb-4 ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
             {isRTL ? "منتجاتنا" : "Our Products"}
           </h2>
-          <p className={`text-[#122D8B]/60 text-lg max-w-2xl mx-auto ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
+          <p className={`text-[#122D8B]/60 max-w-xl mx-auto ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
             {dict.products.subtitle}
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        {/* Products Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map((product) => (
-            <Link href={`/${locale}/products/${product.slug}`} key={product.title} className="group cursor-pointer block">
-              <div className="aspect-[4/5] bg-[#D8DDE9] relative overflow-hidden mb-4">
+            <Link href={`/${locale}/products/${product.slug}`} key={product.title} className="group block">
+              <div className="aspect-[3/4] bg-white relative overflow-hidden rounded-xl shadow-sm">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#122D8B]/40 to-transparent" />
-                <div className="absolute inset-0 bg-[#122D8B]/0 group-hover:bg-[#122D8B]/20 transition-colors" />
-                <div
-                  className={`absolute bottom-0 w-0 h-1 bg-[#1A4AFF] group-hover:w-full transition-all duration-300 ${
-                    isRTL ? "right-0" : "left-0"
-                  }`}
-                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#122D8B]/70 via-[#122D8B]/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <h3 className={`text-white text-sm font-bold ${isRTL ? "font-[var(--font-cairo)] text-right" : ""}`}>
+                    {product.title}
+                  </h3>
+                </div>
               </div>
-              <h3
-                className={`text-lg text-[#122D8B] font-bold uppercase tracking-wide relative inline-block ${
-                  isRTL ? "font-[var(--font-cairo)]" : ""
-                }`}
-              >
-                {product.title}
-                <span
-                  className={`absolute bottom-[-4px] w-0 h-[3px] bg-[#1A4AFF] group-hover:w-full transition-all duration-300 ${
-                    isRTL ? "right-0" : "left-0"
-                  }`}
-                />
-              </h3>
             </Link>
           ))}
         </div>
 
-        <div className="text-center">
+        {/* View All Button */}
+        <div className="text-center mt-10">
           <Link
             href={`/${locale}/products`}
-            className={`inline-flex items-center px-6 py-3 border-2 border-[#122D8B] text-[#122D8B] font-semibold text-sm uppercase tracking-wide hover:bg-[#122D8B] hover:text-white transition-all ${
-              isRTL ? "font-[var(--font-cairo)]" : ""
-            }`}
+            className={`inline-flex items-center gap-2 px-6 py-3 bg-[#122D8B] text-white font-semibold text-sm rounded-lg hover:bg-[#1A4AFF] transition-colors ${isRTL ? "font-[var(--font-cairo)]" : ""}`}
           >
             {dict.products.viewAll}
+            <span>{isRTL ? "←" : "→"}</span>
           </Link>
         </div>
       </div>

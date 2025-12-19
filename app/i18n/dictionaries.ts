@@ -151,9 +151,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       getInTouch: "Get in touch",
     },
     hero: {
-      title: "PREMIUM DENIM & GARMENT MANUFACTURING",
-      subtitle: "High-quality ready-made garments using advanced production cycles. From fabric inspection to final QC, we deliver excellence at every step.",
-      cta: "Explore Products",
+      title: "Crafting Garments with Quality",
+      subtitle: "(Reliability Trust)",
+      cta: "Get started today",
     },
     about: {
       label: "ABOUT US",
@@ -324,9 +324,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       getInTouch: "تواصل معنا",
     },
     hero: {
-      title: "تصنيع الدنيم والملابس الجاهزة الفاخرة",
-      subtitle: "ملابس جاهزة عالية الجودة باستخدام دورات إنتاج متقدمة. من فحص الأقمشة إلى مراقبة الجودة النهائية، نقدم التميز في كل خطوة.",
-      cta: "استكشف المنتجات",
+      title: "صناعة الملابس بجودة عالية",
+      subtitle: "(الموثوقية والثقة)",
+      cta: "ابدأ اليوم",
     },
     about: {
       label: "من نحن",

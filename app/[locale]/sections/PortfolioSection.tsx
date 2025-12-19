@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
 import { getDirection, type Locale } from "../../i18n/config";
 import type { Dictionary } from "../../i18n/dictionaries";
 
@@ -10,6 +13,8 @@ interface PortfolioSectionProps {
 export function PortfolioSection({ locale, dict }: PortfolioSectionProps) {
   const dir = getDirection(locale);
   const isRTL = dir === "rtl";
+  const [visibleSteps, setVisibleSteps] = useState<number[]>([]);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const processSteps = [
     { id: 1, title: dict.portfolio.step1.title, description: dict.portfolio.step1.desc },
@@ -18,8 +23,30 @@ export function PortfolioSection({ locale, dict }: PortfolioSectionProps) {
     { id: 4, title: dict.portfolio.step4.title, description: dict.portfolio.step4.desc },
   ];
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          processSteps.forEach((_, index) => {
+            setTimeout(() => {
+              setVisibleSteps((prev) => [...prev, index]);
+            }, index * 300);
+          });
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section className="py-20 lg:py-28 bg-white" dir={dir}>
+    <section ref={sectionRef} className="py-20 lg:py-28 bg-white" dir={dir}>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image */}
@@ -46,10 +73,14 @@ export function PortfolioSection({ locale, dict }: PortfolioSectionProps) {
             </h2>
 
             <div className="space-y-8">
-              {processSteps.map((step) => (
+              {processSteps.map((step, index) => (
                 <div
                   key={step.id}
-                  className="flex items-start gap-5 flex-row"
+                  className={`flex items-start gap-5 flex-row transition-all duration-500 ${
+                    visibleSteps.includes(index)
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-6"
+                  }`}
                 >
                   <div className="flex-shrink-0 w-10 h-10 bg-[#122D8B] text-white rounded-full flex items-center justify-center font-bold text-sm">
                     {step.id}
@@ -68,12 +99,6 @@ export function PortfolioSection({ locale, dict }: PortfolioSectionProps) {
           </div>
         </div>
 
-        {/* Trusted By */}
-        <div className="mt-20 text-center">
-          <h3 className={`text-2xl md:text-3xl lg:text-4xl font-bold text-[#122D8B] ${isRTL ? "font-[var(--font-cairo)]" : ""}`}>
-            {isRTL ? "موثوق من أكثر من 2,000 علامة تجارية حول العالم" : "Trusted by 2,000+ brands worldwide"}
-          </h3>
-        </div>
       </div>
     </section>
   );

@@ -49,6 +49,26 @@ export function Chatbot({ locale }: ChatbotProps) {
     }
   }, [view, isOpen]);
 
+  // Listen for openChatbot event from AIGuideSection
+  useEffect(() => {
+    const handleOpenChatbot = (e: CustomEvent<{ message: string }>) => {
+      setIsOpen(true);
+      setView("chat");
+      // Set the message after a short delay to ensure chat is ready
+      setTimeout(() => {
+        setInputValue(e.detail.message);
+        // Auto-send the message
+        setTimeout(() => {
+          const sendBtn = document.querySelector('[aria-label="Send message"]') as HTMLButtonElement;
+          if (sendBtn) sendBtn.click();
+        }, 100);
+      }, 300);
+    };
+
+    window.addEventListener("openChatbot", handleOpenChatbot as EventListener);
+    return () => window.removeEventListener("openChatbot", handleOpenChatbot as EventListener);
+  }, []);
+
   // Add welcome message when chat starts
   useEffect(() => {
     if (view === "chat" && messages.length === 0) {
