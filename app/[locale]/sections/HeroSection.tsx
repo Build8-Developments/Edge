@@ -180,7 +180,7 @@ export function HeroSection({ locale, dict }: HeroSectionProps) {
           className="absolute inset-0 h-[130%]"
           style={{
             transform: `translateY(${scrollY}px)`,
-            backgroundImage: `url('/hero-factory.jpg')`,
+            backgroundImage: `url('/assets/EDGE/Homepage/First section/PHOTO-2026-01-23-15-59-31.jpg')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

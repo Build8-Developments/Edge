@@ -41,25 +41,25 @@ export function OurServicesSection({ locale }: OurServicesSectionProps) {
           id: 1,
           title: "القص",
           description: "قص دقيق باستخدام معدات متقدمة لتحقيق أقصى كفاءة للقماش ودقة عالية.",
-          image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Cutting.jpg",
         },
         {
           id: 2,
           title: "الخياطة",
           description: "خياطة عالية المستوى من فنيين مهرة لضمان المتانة والتشطيب الراقي.",
-          image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Sewing.jpg",
         },
         {
           id: 3,
           title: "الغسيل",
           description: "عمليات غسيل وتشطيب متخصصة تعزز أداء القماش وملمسه ومظهره.",
-          image: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Washing.jpg",
         },
         {
           id: 4,
           title: "التعبئة",
           description: "فحص نهائي وتعبئة احترافية لضمان استيفاء المنتجات لمعايير التصدير والتسليم.",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Packing.jpg",
         },
       ]
     : [
@@ -67,25 +67,25 @@ export function OurServicesSection({ locale }: OurServicesSectionProps) {
           id: 1,
           title: "Cutting",
           description: "Precision cutting using advanced equipment to maximize fabric efficiency and accuracy.",
-          image: "https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Cutting.jpg",
         },
         {
           id: 2,
           title: "Sewing",
           description: "High-standard stitching carried out by skilled technicians to ensure durability and refined finishing.",
-          image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Sewing.jpg",
         },
         {
           id: 3,
           title: "Laundry",
           description: "Specialized washing and finishing processes that enhance fabric performance, texture, and appearance.",
-          image: "https://images.unsplash.com/photo-1489274495757-95c7c837b101?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Washing.jpg",
         },
         {
           id: 4,
           title: "Packing",
           description: "Final inspection and professional packing to ensure products meet export and delivery standards.",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop",
+          image: "/assets/EDGE/Homepage/2nd section/Packing.jpg",
         },
       ];
 

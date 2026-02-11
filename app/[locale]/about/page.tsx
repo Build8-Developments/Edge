@@ -68,20 +68,20 @@ export default async function AboutPage({ params }: PageProps) {
 
   const values = isRTL
     ? [
-        { title: "الموثوقية", description: "تسليم ثابت وشراكات يمكن الاعتماد عليها", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" },
-        { title: "الجودة", description: "اهتمام دقيق بالتفاصيل في كل غرزة", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" },
-        { title: "الاحترافية", description: "معايير رائدة في الصناعة وخبرة عالية", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-        { title: "الابتكار", description: "تبني التقنيات والأساليب الجديدة", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" },
-        { title: "الشفافية", description: "تواصل مفتوح وعمليات واضحة", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" },
-        { title: "المرونة", description: "حلول قابلة للتكيف مع المتطلبات الفريدة", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" },
+        { title: "الموثوقية", description: "تسليم ثابت وشراكات يمكن الاعتماد عليها", image: "/assets/EDGE/About us/Our values/Our values  _ reliability .jpg" },
+        { title: "الجودة", description: "اهتمام دقيق بالتفاصيل في كل غرزة", image: "/assets/EDGE/About us/Our values/Our values _ quality.jpg" },
+        { title: "الاحترافية", description: "معايير رائدة في الصناعة وخبرة عالية", image: "/assets/EDGE/About us/Our values/Our values _ proffessionalism.jpg" },
+        { title: "الابتكار", description: "تبني التقنيات والأساليب الجديدة", image: "/assets/EDGE/About us/Our values/Our values _ innovation .jpg" },
+        { title: "الشفافية", description: "تواصل مفتوح وعمليات واضحة", image: "/assets/EDGE/About us/Our values/Our values _ transparency .jpg" },
+        { title: "المرونة", description: "حلول قابلة للتكيف مع المتطلبات الفريدة", image: "/assets/EDGE/About us/Our values/Flexibility .jpg" },
       ]
     : [
-        { title: "Reliability", description: "Consistent delivery and dependable partnerships", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80" },
-        { title: "Quality", description: "Meticulous attention to detail in every stitch", image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" },
-        { title: "Professionalism", description: "Industry-leading standards and expertise", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80" },
-        { title: "Innovation", description: "Embracing new technologies and methods", image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" },
-        { title: "Transparency", description: "Open communication and clear processes", image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" },
-        { title: "Flexibility", description: "Adaptable solutions for unique requirements", image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" },
+        { title: "Reliability", description: "Consistent delivery and dependable partnerships", image: "/assets/EDGE/About us/Our values/Our values  _ reliability .jpg" },
+        { title: "Quality", description: "Meticulous attention to detail in every stitch", image: "/assets/EDGE/About us/Our values/Our values _ quality.jpg" },
+        { title: "Professionalism", description: "Industry-leading standards and expertise", image: "/assets/EDGE/About us/Our values/Our values _ proffessionalism.jpg" },
+        { title: "Innovation", description: "Embracing new technologies and methods", image: "/assets/EDGE/About us/Our values/Our values _ innovation .jpg" },
+        { title: "Transparency", description: "Open communication and clear processes", image: "/assets/EDGE/About us/Our values/Our values _ transparency .jpg" },
+        { title: "Flexibility", description: "Adaptable solutions for unique requirements", image: "/assets/EDGE/About us/Our values/Flexibility .jpg" },
       ];
 
   const stats = isRTL
@@ -124,7 +124,7 @@ export default async function AboutPage({ params }: PageProps) {
             ? "منذ 2017، تقوم إيدج للملابس بتحويل الأفكار إلى دنيم عالي الجودة وملابس جاهزة، بدقة وعناية وموثوقية."
             : "Since 2017, Edge for Garments has been transforming ideas into high-quality denim and ready-made apparel, with precision, care, and reliability."
         }
-        image="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1920&q=80"
+        image="/assets/EDGE/About us/Hero/Hero section.jpg"
         isRTL={isRTL}
         breadcrumbs={[
           { label: isRTL ? "الرئيسية" : "Home", href: `/${locale}` },
@@ -165,7 +165,7 @@ export default async function AboutPage({ params }: PageProps) {
             <ScrollReveal direction={isRTL ? "left" : "right"} delay={200}>
               <div className={`relative h-[400px] lg:h-[500px] ${isRTL ? "lg:order-1" : "lg:order-2"}`}>
                 <Image
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80"
+                  src="/assets/EDGE/About us/second section _ about our company/About our company section.jpg"
                   alt="EDGE Factory"
                   fill
                   className="object-cover rounded-2xl"
@@ -196,7 +196,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className={`relative h-full rounded-[2rem] overflow-hidden group ${isRTL ? "text-right" : ""}`}>
                 {/* Background Image */}
                 <Image
-                  src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=1200&q=80"
+                  src="/assets/EDGE/About us/Mission and vision/Mission.jpg"
                   alt={isRTL ? "مهمتنا" : "Our Mission"}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -234,7 +234,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className={`relative h-full rounded-[2rem] overflow-hidden group ${isRTL ? "text-right" : ""}`}>
                 {/* Background Image */}
                 <Image
-                  src="https://images.unsplash.com/photo-1582552938357-32b906df40cb?w=800&q=80"
+                  src="/assets/EDGE/About us/Mission and vision/Vision.jpg"
                   alt={isRTL ? "رؤيتنا" : "Our Vision"}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-105"

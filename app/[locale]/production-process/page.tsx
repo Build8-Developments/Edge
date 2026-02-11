@@ -64,7 +64,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "RnDIcon",
           title: "البحث والتطوير",
           image:
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/R%20and%20d.jpg",
           description:
             "فريق متخصص في البحث والتطوير لابتكار حلول جديدة ومواكبة أحدث التقنيات.",
           details: [
@@ -78,7 +78,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "CustomDesignIcon",
           title: "التصميم المخصص",
           image:
-            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Custom%20design.jpg",
           description:
             "فريق تصميم محترف لتحويل أفكارك إلى تصاميم فريدة تناسب علامتك التجارية.",
           details: [
@@ -92,7 +92,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "FabricSourcingIcon",
           title: "توريد وفحص الأقمشة",
           image:
-            "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Fabric%20Sourcing%20%26%20Inspection.jpg",
           description:
             "توريد أجود الأقمشة من مصادر موثوقة مع فحص جودة صارم.",
           details: [
@@ -106,7 +106,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "CuttingIcon",
           title: "القص",
           image:
-            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Cutting.jpg",
           description: "قص دقيق بآلات متقدمة لأنماط دقيقة وأقل هدر.",
           details: [
             "صنع الباترون CAD/CAM",
@@ -119,7 +119,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "SewingIcon",
           title: "الخياطة",
           image:
-            "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Sewing.jpg",
           description:
             "خياطة احترافية بأيدي حرفيين مهرة باستخدام معدات صناعية.",
           details: [
@@ -133,7 +133,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "DecorationIcon",
           title: "التطريز والطباعة والزخرفة",
           image:
-            "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Embroidery.jpg",
           description: "خدمات تطريز وطباعة وزخرفة مخصصة للعلامات التجارية.",
           details: [
             "آلات تطريز متعددة الرؤوس",
@@ -146,7 +146,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "WashingIcon",
           title: "الغسيل",
           image:
-            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Washing.jpg",
           description: "تقنيات غسيل متخصصة للحصول على التشطيبات المطلوبة.",
           details: [
             "غسيل حجري وإنزيمي",
@@ -159,7 +159,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "DeliveryIcon",
           title: "التغليف والتوصيل",
           image:
-            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Packing.jpg",
           description: "تغليف احترافي وتوصيل آمن لجميع أنحاء العالم.",
           details: [
             "فحص نهائي 100%",
@@ -172,7 +172,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "MarketingIcon",
           title: "التسويق والمبيعات",
           image:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Marketing%20and%20sales.jpg",
           description: "دعم تسويقي متكامل لمساعدتك في الوصول لعملائك.",
           details: [
             "استراتيجيات تسويق مخصصة",
@@ -187,7 +187,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "RnDIcon",
           title: "R&D",
           image:
-            "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/R%20and%20d.jpg",
           description:
             "Dedicated research and development team innovating new solutions and staying ahead with latest technologies.",
           details: [
@@ -201,7 +201,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "CustomDesignIcon",
           title: "Custom Design",
           image:
-            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Custom%20design.jpg",
           description:
             "Professional design team to transform your ideas into unique designs that fit your brand.",
           details: [
@@ -215,7 +215,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "FabricSourcingIcon",
           title: "Fabric Sourcing & Inspection",
           image:
-            "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Fabric%20Sourcing%20%26%20Inspection.jpg",
           description:
             "Sourcing premium fabrics from trusted suppliers with rigorous quality inspection.",
           details: [
@@ -229,7 +229,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "CuttingIcon",
           title: "Cutting",
           image:
-            "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Cutting.jpg",
           description:
             "Precision cutting with advanced machinery for accurate patterns and minimal waste.",
           details: [
@@ -243,7 +243,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "SewingIcon",
           title: "Sewing",
           image:
-            "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Sewing.jpg",
           description:
             "Expert stitching by skilled craftsmen using industrial-grade equipment.",
           details: [
@@ -257,7 +257,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "DecorationIcon",
           title: "Embroidery, Printing & Decoration",
           image:
-            "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Embroidery.jpg",
           description:
             "Custom embroidery, printing and decoration services for branding and design elements.",
           details: [
@@ -271,7 +271,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "WashingIcon",
           title: "Washing",
           image:
-            "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Washing.jpg",
           description:
             "Specialized washing techniques for desired finishes and fabric treatment.",
           details: [
@@ -285,7 +285,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "DeliveryIcon",
           title: "Packaging & Delivery",
           image:
-            "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Packing.jpg",
           description:
             "Professional packaging and secure delivery worldwide.",
           details: [
@@ -299,7 +299,7 @@ export default async function ProductionProcessPage({ params }: PageProps) {
           iconName: "MarketingIcon",
           title: "Marketing & Sales",
           image:
-            "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
+            "/assets/EDGE/Production%20process/third%20section%20_%20prod%20cycle/Marketing%20and%20sales.jpg",
           description:
             "Comprehensive marketing support to help you reach your customers.",
           details: [

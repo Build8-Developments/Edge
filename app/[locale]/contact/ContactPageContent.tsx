@@ -170,7 +170,7 @@ export function ContactPageContent({ locale, dict }: ContactPageContentProps) {
       <PageHero
         title={dict.contact.title}
         subtitle={dict.contact.subtitle}
-        image="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+        image="/assets/EDGE/Contact/Hero.jpg"
         isRTL={isRTL}
         breadcrumbs={[
           { label: isRTL ? "الرئيسية" : "Home", href: `/${locale}` },

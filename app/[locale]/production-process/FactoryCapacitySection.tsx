@@ -58,7 +58,7 @@ const tabsData: TabData[] = [
     key: "cutting",
     label: { en: "CUTTING", ar: "القص" },
     icon: <ScissorsIcon />,
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    image: "/assets/EDGE/Production%20process/Second%20section/Cutting.jpg",
     stats: [
       { value: "8", label: { en: "Cutting tables", ar: "طاولات قص" } },
       { value: "8", label: { en: "Manual cutters", ar: "قصاصات يدوية" } },
@@ -70,7 +70,7 @@ const tabsData: TabData[] = [
     key: "sewing",
     label: { en: "SEWING", ar: "الخياطة" },
     icon: <SewingMachineIcon />,
-    image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
+    image: "/assets/EDGE/Production%20process/Second%20section/Sewing.jpg",
     stats: [
       { value: "8", label: { en: "Sewing lines", ar: "خطوط خياطة" } },
       { value: "8", label: { en: "Back pocket automats", ar: "ماكينات جيوب أوتوماتيك" } },
@@ -82,7 +82,7 @@ const tabsData: TabData[] = [
     key: "laundry",
     label: { en: "LAUNDRY", ar: "الغسيل" },
     icon: <LaundryIcon />,
-    image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=800&q=80",
+    image: "/assets/EDGE/Production%20process/Second%20section/Washing.jpg",
     stats: [
       { value: "6", label: { en: "Washing machines", ar: "ماكينات غسيل" } },
       { value: "4", label: { en: "Dryers", ar: "مجففات" } },
@@ -94,7 +94,7 @@ const tabsData: TabData[] = [
     key: "finishing",
     label: { en: "FINISHING & PACKING", ar: "التشطيب والتغليف" },
     icon: <PackageIcon />,
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
+    image: "/assets/EDGE/Production%20process/Second%20section/Packing.jpg",
     stats: [
       { value: "8", label: { en: "Packing lines", ar: "خطوط تغليف" } },
       { value: "280", label: { en: "Operators", ar: "عامل" } },

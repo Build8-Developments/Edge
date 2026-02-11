@@ -119,7 +119,7 @@ export default async function ProductsPage({ params }: PageProps) {
         subtitle={isRTL
           ? "ملابس عالية الجودة مصنوعة بدقة. من الدنيم الكلاسيكي إلى التصميمات المخصصة، نصنع منتجات تلبي أعلى المعايير."
           : "Quality garments crafted with precision. From classic denim to custom designs, we manufacture products that meet the highest standards."}
-        image="https://images.unsplash.com/photo-1542272604-787c3835535d?w=1920&q=80"
+        image="/assets/EDGE/Our products/Hero/Hero.jpg"
         isRTL={isRTL}
         breadcrumbs={[
           { label: isRTL ? "الرئيسية" : "Home", href: `/${locale}` },

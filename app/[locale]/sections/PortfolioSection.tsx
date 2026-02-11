@@ -98,12 +98,13 @@ export function PortfolioSection({ locale, dict }: PortfolioSectionProps) {
 
           {/* Image - Right Side */}
           <ScrollReveal direction={isRTL ? "left" : "right"} delay={200}>
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden lg:order-2 min-h-[500px] lg:min-h-0">
+          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden lg:order-2 min-h-[400px] lg:min-h-0 flex items-end justify-center bg-alabaster-grey">
             <Image
-              src="https://images.unsplash.com/photo-1558171813-4c088753af8f?w=800&q=80"
+              src="/assets/EDGE/Homepage/4 section_ process/PHOTO-2026-01-23-15-59-26 2.jpg"
               alt="Our Process"
               fill
-              className="object-cover"
+              className="object-cover object-bottom"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </div>
           </ScrollReveal>

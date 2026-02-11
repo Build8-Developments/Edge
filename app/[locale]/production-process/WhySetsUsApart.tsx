@@ -25,64 +25,64 @@ export function WhySetsUsApart({ isRTL }: WhySetsUsApartProps) {
         {
           title: "الجودة",
           description: "نضمن أعلى المعايير في كل مرحلة من مراحل الإنتاج.",
-          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20_%20quality.jpg",
         },
         {
           title: "الابتكار",
           description: "نطور باستمرار تصاميم وتقنيات جديدة للبقاء في صدارة صناعة الدنيم.",
-          image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20_%20innovation%20.jpg",
         },
         {
           title: "الاستدامة",
           description: "نحن ملتزمون بالتصنيع المسؤول بيئياً وأخلاقياً.",
-          image: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Flexibility%20.jpg",
         },
         {
           title: "رضا العملاء",
           description: "نركز على فهم وتلبية توقعات عملائنا.",
-          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Suctomer%20satisfaction.jpg",
         },
         {
           title: "النزاهة",
           description: "ندير أعمالنا بصدق وشفافية.",
-          image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Integrity.jpg",
         },
         {
           title: "الموثوقية",
           description: "نسلم في الوقت المحدد، في كل مرة، لبناء الثقة مع كل طلب.",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20%20_%20reliability%20.jpg",
         },
       ]
     : [
         {
           title: "Quality",
           description: "We ensure the highest standards in every stage of production.",
-          image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20_%20quality.jpg",
         },
         {
           title: "Innovation",
           description: "We constantly develop new designs and techniques to stay ahead in the denim industry.",
-          image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20_%20innovation%20.jpg",
         },
         {
           title: "Sustainability",
           description: "We are committed to environmentally responsible and ethical manufacturing.",
-          image: "https://images.unsplash.com/photo-1606041008023-472dfb5e530f?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Flexibility%20.jpg",
         },
         {
           title: "Customer Satisfaction",
           description: "We focus on understanding and meeting our clients' expectations.",
-          image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Suctomer%20satisfaction.jpg",
         },
         {
           title: "Integrity",
           description: "We conduct our business with honesty and transparency.",
-          image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Integrity.jpg",
         },
         {
           title: "Reliability",
           description: "We deliver on time, every time, building trust with every order.",
-          image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
+          image: "/assets/EDGE/Production%20process/What%20sets%20us%20apart%20in%20managing%20your%20production/Our%20values%20%20_%20reliability%20.jpg",
         },
       ];
 
